@@ -1,0 +1,51 @@
+header{
+    @include sectionSize(5rem);
+    padding-top: 1.6rem;
+    background-color: black;
+}
+
+    nav{
+        max-width: 80%;
+        margin: auto;
+        @include flex(row, space-between, center);
+
+        #Logo{
+            font-size: 2.4rem;
+        }
+
+        .navList{
+             @include flex(row, space-around, center);
+             width: 30rem; 
+            
+             .navItem{
+                list-style: none;
+
+                    a,
+                    .navLinks{
+                        text-decoration: none;
+                        font-size: 1.6rem;
+                    }
+                    .navLinks:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+             }
+        }
+    }
+
+    /*tablet*/
+    @media only screen and (max-width: 1024px) {
+       nav{
+            max-width: 80%;
+       }
+      }
+      /*mobile*/
+      @media only screen and (max-width: 700px) {
+        nav{
+             max-width: 90%;
+        }
+        .navLinks{
+            display:none;
+        }
+        
+       }

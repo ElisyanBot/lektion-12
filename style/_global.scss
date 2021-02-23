@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: white;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    /*new standard font*/
+    font-size: 62.5%;
+    /*1 rem = 1px*/
+}
+
+body{
+    background-color: grey;
+}
+
+/*mixins*/
+
+ @mixin flex ($flex-direction, $justify-content, $align-items){
+     display: flex;
+     flex-direction: $flex-direction;
+     justify-content: $justify-content;
+     align-items: $align-items;
+ }
+
+ @mixin sectionSize ($height){
+     margin: auto;
+     max-width: 140rem;
+     height: $height;
+ }

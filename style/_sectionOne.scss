@@ -1,0 +1,92 @@
+.sectionOne{
+    @include sectionSize(90rem);
+    @include flex(column, center, center);
+    background-color: black;
+
+    .sectionOne-article{
+        @include flex(column, flex-start, center);
+        max-width: 57.5rem;
+        max-height: 25rem;
+
+        text-align: center;
+
+        padding-bottom: 5rem;
+
+        h2{
+            font-size: 8.4rem;
+            line-height: 10rem;
+            font-weight: 500;
+
+            padding-bottom: 2rem;
+        }
+        p{
+            font-size: 2.2rem;
+            line-height: 3.4rem;
+            font-weight: 400;
+        }
+    }
+
+        .imgFuji{
+            max-width: 86.5rem;
+        
+
+            img{
+                width: 100%;
+            }
+        }
+
+        /*tablet*/
+        @media only screen and (max-width: 1024px) {
+
+
+            .imgFuji{
+                max-width: 86.5rem;
+                content: url(../img/fujiTablet.png);
+            }
+
+       
+     }
+   /*mobile*/
+     @media only screen and (max-width: 700px) {
+            .sectionOne{
+                height: 10rem;
+            }
+            .sectionOne-article{
+                max-width: 40rem;
+
+                h2{
+                    font-size: 6.4rem;
+
+                    padding-bottom: 2rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+
+            .imgFuji{
+               width: 80%;
+                content: url(../img/fujiMobile.png);
+            }
+
+        }
+    /*mobile, 21.6 display*/
+    @media only screen and (max-width: 450px) {
+        .sectionOne{
+            height: 10rem;
+        }
+            .sectionOne-article{
+                width: 30rem;
+
+                h2{
+                    font-size: 5.4rem;
+
+                    padding-bottom: 2rem;
+                }
+                p{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+}
+
